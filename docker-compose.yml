@@ -1,0 +1,12 @@
+nodeweb:
+  build: .
+  links:
+    - couchdb
+  ports:
+    - "3080:3000"
+    - "4080:4000"
+
+couchdb:
+  image: klaemo/couchdb:1.6.1
+  ports:
+    - "5984:5984"
